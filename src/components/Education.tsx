@@ -67,7 +67,7 @@ const Education = () => {
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <img
-                src="../src/assets/images/education1.png"
+                src="/my-portfolio/images/education1.png"
                 alt="Education"
                 className="w-full h-full object-contain"
               />

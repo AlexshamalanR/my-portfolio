@@ -1,7 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 
-const profileImage = '../src/assets/images/profile.jpeg'
+const profileImage = '/my-portfolio/images/profile.jpeg'
 
 const About = () => {
   return (
