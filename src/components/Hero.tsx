@@ -62,7 +62,7 @@ const Hero = () => {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-accent/20 shadow-xl">
               <img 
-                src="/my-portfolio/public/images/hero.jpeg"
+                src="/my-portfolio/images/hero.jpeg"
                 alt="Alex Shamalan R"
                 className="w-full h-full object-cover filter grayscale hover:grayscale-1 transition-all duration-500"
               />
