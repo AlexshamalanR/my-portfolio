@@ -35,7 +35,7 @@ const TopNav = ({ onMenuClick }: TopNavProps) => {
             className="hidden md:block h-12 w-auto"
           >
             <img
-              src="/images/any-logo.png"
+              src="/my-portfolio/images/any-logo.png"
               alt="Logo"
               className="h-full w-auto"
             />
@@ -58,7 +58,7 @@ const TopNav = ({ onMenuClick }: TopNavProps) => {
               className="h-10 w-auto"
             >
               <img
-                src="/images/any-logo.png"
+                src="/my-portfolio/images/any-logo.png"
                 alt="Logo"
                 className="h-full w-auto"
               />

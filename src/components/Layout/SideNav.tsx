@@ -34,7 +34,7 @@ const SideNav = ({ isOpen, onClose }: SideNavProps) => {
         <div className="text-center mb-8">
           <div className="w-32 h-32 mx-auto mb-4">
             <img
-              src="/images/any-logo.png"
+              src="/my-portfolio/images/any-logo.png"
               alt="Logo"
               className="w-full h-full object-contain"
             />
