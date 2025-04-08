@@ -40,14 +40,15 @@ body {
   @apply bg-clip-text text-transparent bg-gradient-to-r from-accent to-blue-500;
 }
 
-.hide-scrollbar {
+/* .hide-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
-}
+} */
+
 
 /* Add line clamp utility */
 @layer utilities {

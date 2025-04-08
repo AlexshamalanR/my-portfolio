@@ -66,7 +66,8 @@ const SkillBadge = ({ skill }: { skill: Skill }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
       whileHover={{ scale: 1.05 }}
-      viewport={{ once: true }}
+      viewport={{ once: false }}
+      transition={{ duration: 0.5 }}
       className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/30 border border-accent/10 backdrop-blur-sm hover:border-accent/30 transition-all duration-300 group"
       style={{
         boxShadow: `0 0 20px ${skill.color}15`
@@ -90,7 +91,8 @@ const Skills = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
+          transition={{ duration: 1 }}
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-textLight mb-4">Skills & Technologies</h2>
@@ -103,7 +105,7 @@ const Skills = () => {
               key={category.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               transition={{ delay: index * 0.1 }}
             >
               <h3 className="text-xl font-semibold text-textLight/80 mb-6 flex items-center gap-3">

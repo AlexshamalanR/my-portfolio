@@ -5,6 +5,15 @@ import { IoSchool } from 'react-icons/io5'
 
 const educationData = [
   {
+    title: "Full Stack Java Development",
+    institution: "J-Spider",
+    location: "Bengaluru",
+    period: "September 2022 - March 2023",
+    details: "Comprehensive training in Full Stack Java Development",
+    icon: FaCode,
+    color: "#DC2626"
+  },
+  {
     title: "Bachelor of Engineering (B.E)",
     institution: "PES Institute of Technology and Management",
     location: "Shivamogga, Karnataka",
@@ -13,15 +22,6 @@ const educationData = [
     details: "VTU University",
     icon: FaGraduationCap,
     color: "#4F46E5"
-  },
-  {
-    title: "Full Stack Java Development",
-    institution: "J-Spider",
-    location: "Bengaluru",
-    period: "September 2022 - March 2023",
-    details: "Comprehensive training in Full Stack Java Development",
-    icon: FaCode,
-    color: "#DC2626"
   },
   {
     title: "Pre-University Education (PUC)",
@@ -50,7 +50,8 @@ const Education = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
+          transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
           <h2 className="text-3xl font-bold text-textLight mb-4">Education</h2>
@@ -63,11 +64,12 @@ const Education = () => {
             className="md:col-span-5 sticky top-24"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
+            viewport={{ once: false }}
+            transition={{ duration: 0.5 }}
           >
             <div className="relative w-full aspect-square max-w-md mx-auto">
               <img
-                src="/my-portfolio/images/education1.png"
+                src="/my-portfolio/images/edu.jpg"
                 alt="Education"
                 className="w-full h-full object-contain"
               />
@@ -81,7 +83,7 @@ const Education = () => {
                 key={index}
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
+                viewport={{ once: false }}
                 transition={{ delay: index * 0.2 }}
                 className="group relative"
               >

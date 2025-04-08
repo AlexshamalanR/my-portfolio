@@ -24,23 +24,21 @@ const SideNav = ({ isOpen, onClose }: SideNavProps) => {
       {/* Close button */}
       <button
         onClick={onClose}
-        className="absolute top-4 right-4 p-2 text-text hover:text-accent"
+        className="absolute top-4 right-4 p-2 text-text hover:text-accent md:hidden"
       >
         <FaTimes className="text-xl" />
       </button>
 
       <div className="flex flex-col h-full p-6">
-        {/* Profile Section */}
+        {/* Logo Section */}
         <div className="text-center mb-8">
-          <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
+          <div className="w-32 h-32 mx-auto mb-4">
             <img
-              src="/images/profile.jpg"
-              alt="Profile"
-              className="w-full h-full object-cover"
+              src="/images/any-logo.png"
+              alt="Logo"
+              className="w-full h-full object-contain"
             />
           </div>
-          <h2 className="text-xl font-bold text-textLight">Alex Shamalan</h2>
-          <p className="text-text">Full Stack Developer</p>
         </div>
 
         {/* Navigation Links */}

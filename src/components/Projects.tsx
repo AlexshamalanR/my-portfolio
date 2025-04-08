@@ -7,20 +7,21 @@ const projectsData = [
   {
     title: "Webhook Nest",
     description: "A modern webhook management system that enables users to create, monitor, and manage webhooks through an intuitive user interface. Features include real-time monitoring, retry mechanisms, and detailed logging.",
-    image: "/images/webhook-nest.png", // Add your project image
+    image: "/my-portfolio/images/webhook-nest.png", // Add your project image
     techStack: ["Node.js", "React", "MongoDB"],
     icons: [
       { icon: SiNodedotjs, color: "#68A063" },
       { icon: SiReact, color: "#61DAFB" },
+      { icon: SiMysql, color: "#4479A1" },
     ],
-    github: "https://github.com/yourusername/webhook-nest",
+    github: "https://github.com/AlexshamalanR/webhook-nest",
     demo: "https://webhook-nest.demo.com", // If available
     featured: true
   },
   {
     title: "Email Validator",
     description: "Advanced email validation tool that performs real-time verification using multiple validation layers. Features include syntax checking, disposable email detection, domain verification, and SMTP-level validation.",
-    image: "/images/email-validator.png", // Add your project image
+    image: "/my-portfolio/images/email-val1.png", // Add your project image
     techStack: ["Python", "AWS S3", "Redis", "MySQL", "SFTP"],
     icons: [
       { icon: SiPython, color: "#3776AB" },
@@ -28,33 +29,49 @@ const projectsData = [
       { icon: SiRedis, color: "#DC382D" },
       { icon: SiMysql, color: "#4479A1" },
     ],
-    github: "https://github.com/yourusername/email-validator",
+    // github: "https://github.com/yourusername/email-validator",
     featured: true
   },
   {
     title: "ELK Integration Platform",
     description: "Comprehensive ELK (Elasticsearch, Logstash, Kibana) integration for email service platforms like Listmonk and Mapengage. Provides advanced logging, monitoring, and analytics capabilities.",
-    image: "/images/elk-integration.png", // Add your project image
+    image: "/my-portfolio/images/elk-stack.png", // Add your project image
     techStack: ["Elasticsearch", "Logstash", "Kibana"],
     icons: [
       { icon: SiElasticsearch, color: "#005571" },
       { icon: SiLogstash, color: "#005571" },
       { icon: SiKibana, color: "#005571" },
     ],
-    github: "https://github.com/yourusername/elk-integration",
+    // github: "https://github.com/yourusername/elk-integration",
     featured: true
   },
   {
     title: "Salon WhatsApp Chatbot",
     description: "Automated WhatsApp chatbot for salon management, handling appointment scheduling, service inquiries, reminders, and customer support through WhatsApp Business API.",
-    image: "/images/salon-chatbot.png", // Add your project image
+    image: "/my-portfolio/images/whatsapp-bots.png", // Add your project image
     techStack: ["Node.js", "WhatsApp API", "MongoDB"],
     icons: [
       { icon: SiNodedotjs, color: "#68A063" },
       { icon: SiWhatsapp, color: "#25D366" },
+      { icon: SiMysql, color: "#4479A1" },
     ],
-    github: "https://github.com/yourusername/salon-chatbot",
+    // github: "https://github.com/yourusername/salon-chatbot",
     featured: true
+  },
+  {
+    title: "Bounce ID Tracker",
+    description: "Built a backend system to capture bounce email IDs from delivery logs and sync them with external platforms like Clevertap, Listmonk, and MapEngage.",
+    image: "/my-portfolio/images/bounce-id-sync.jpg",
+    techStack: ["Node.js", "Python", "Logstash", "Elasticsearch"],
+    icons: [
+      { icon: SiNodedotjs, color: "#68A063" },
+      { icon: SiPython, color: "#3776AB" }, 
+      { icon: SiElasticsearch, color: "#005571" },
+      { icon: SiLogstash, color: "#000000" },
+      
+    ],
+    // github: "https://github.com/AlexshamalanR/bounce-id-sync", // optional
+    featured: false
   }
 ]
 
@@ -153,23 +170,23 @@ const Projects = () => {
   }
 
   // Auto scroll effect
-  useEffect(() => {
-    const interval = setInterval(() => {
-      if (scrollContainerRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     if (scrollContainerRef.current) {
+  //       const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
         
-        if (scrollLeft + clientWidth >= scrollWidth) {
-          // Reset to start when reaching the end
-          scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' })
-        } else {
-          // Scroll right
-          scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' })
-        }
-      }
-    }, 3000) // Scroll every 3 seconds
+  //       if (scrollLeft + clientWidth >= scrollWidth) {
+  //         // Reset to start when reaching the end
+  //         scrollContainerRef.current.scrollTo({ left: 0, behavior: 'smooth' })
+  //       } else {
+  //         // Scroll right
+  //         scrollContainerRef.current.scrollBy({ left: 300, behavior: 'smooth' })
+  //       }
+  //     }
+  //   }, 3000) // Scroll every 3 seconds
 
-    return () => clearInterval(interval)
-  }, [])
+  //   return () => clearInterval(interval)
+  // }, [])
 
   return (
     <section id="projects" className="py-20">
@@ -177,7 +194,8 @@ const Projects = () => {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
+          viewport={{ once: false }}
+          transition={{ delay: 0.5 }}
           className="text-center mb-8"
         >
           <h2 className="text-3xl font-bold text-textLight mb-4">Projects</h2>
@@ -218,7 +236,7 @@ const Projects = () => {
                   key={index}
                   initial={{ opacity: 0, x: 50 }} // Start from right
                   whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
+                  viewport={{ once: false }}
                   transition={{ delay: index * 0.1 }}
                 >
                   <ProjectCard project={project} />
@@ -227,6 +245,7 @@ const Projects = () => {
             </div>
           </div>
         </div>
+
 
         {/* View More Button */}
         <motion.div
